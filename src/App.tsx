@@ -1,18 +1,18 @@
-import AnalogClock from './analog-clock/analog-clock'
+import AnalogClock from './components/analog-clock/analog-clock'
 import avatar from './assets/avatar.jpg'
 
 function App() {
   return (
-    <div className="flex h-screen w-full flex-col bg-sky-900 text-slate-200">
-      <header className="w-ful flex justify-between px-10 pt-8">
+    <div className="flex flex-col bg-sky-900 text-slate-200">
+      <header className="flex w-full justify-between px-10 py-12">
         <div className="flex h-10 items-center">
           <div className="h-12 w-12">
             <img className="rounded-full" src={avatar} alt="Avatar" />
           </div>
-          <h1 className="pl-4 text-center text-2xl">Analog clock</h1>
+          <h1 className="hidden pl-4 text-center text-2xl md:flex">Analog clock</h1>
         </div>
 
-        <nav className="flex gap-6">
+        <nav className="flex items-center gap-6">
           <a href="http://github.com/aiherrera" target="_blank">
             Github
           </a>
@@ -25,7 +25,7 @@ function App() {
         </nav>
       </header>
 
-      <main className="flex h-screen w-full justify-center">
+      <main className="flex h-[calc(100vh-140px)] w-full px-10">
         <AnalogClock />
       </main>
     </div>

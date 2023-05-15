@@ -1,4 +1,4 @@
-export interface ThemeType {
+export interface ThemeMap {
   main: string
   shadow: string
   hand: {
@@ -51,6 +51,6 @@ const AVALIABLE_THEMES = [
   },
 ]
 
-export const THEMES: Map<string | null, ThemeType> = new Map(
+export const THEMES: Map<string | null, ThemeMap> = new Map(
   AVALIABLE_THEMES.map(({ key, value }) => [key, value])
 )

@@ -15,17 +15,19 @@
 
 > This is a fully configurated template starter for quickly create Proof Of Concepts.
 
-Have you ever needed to prepare ASAP(as usual) a quick demonstration to be shown or just wanted to develop an idea that hit you out of the blue?
+Analog clock developed with react and tailwinds, for demonstration purposes: [Blog post]()
 
-![Preview Image](https://github.com/aiherrera/analog-clock/blob/development/public/example.png?raw=true)
+It is detailed post on how to develop an analog clock from scratch, but with some bonus power ups:
 
-With this template, you can rapidly create projects that serve as evidence or prototypes to demonstrate the feasibility and potential of a particular idea or technology. This starter includes all the necessary configurations and settings to get you up and running quickly. It is designed to be easily customizable to fit the specific needs of your project, allowing you to focus on the core development work without getting bogged down by setup and configuration.
+- hook for audio manipulation (clock ticking)
+- hook for time and daylight manipulation (an icon would be shown - sun | moon - based on the time of the day)
+- three themes (dark, light & neutral)
+
+&ensp;
+
+![Preview Image](https://github.com/aiherrera/analog-clock/blob/development/public/example.gif?raw=true)
 
 ---
-
-> ### Prerequisites
-
-- node >=16.0.0
 
 > ### Install dependencies
 
@@ -37,12 +39,6 @@ npm i
 
 ```sh
 npm run dev
-```
-
-> ### Run tests
-
-```sh
-npm run test
 ```
 
 ## Author
@@ -63,9 +59,7 @@ npm run test
 
 Give a ⭐️ if this project helped you!
 
-<a href="https://www.patreon.com/user?u=87542399">
-  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
+<a href="https://www.buymeacoffee.com/aiherrera" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 &ensp;
 

@@ -1,10 +1,10 @@
 import { ChangeEvent, FC, useEffect, useState } from 'react'
 
-interface SelectThemeProps {
+interface ThemeSelectorProps {
   updateTheme: (theme: string) => void
 }
 
-const SelectTheme: FC<SelectThemeProps> = ({ updateTheme }) => {
+const ThemeSelector: FC<ThemeSelectorProps> = ({ updateTheme }) => {
   const [selectedOption, setSelectedOption] = useState('')
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -41,4 +41,4 @@ const SelectTheme: FC<SelectThemeProps> = ({ updateTheme }) => {
   )
 }
 
-export default SelectTheme
+export default ThemeSelector

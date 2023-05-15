@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { THEMES, ThemeType } from './themes'
+import { THEMES, ThemeMap } from '../components/theme-selector/themes'
 
-type ThemeHook = (themeName?: string) => [ThemeType | undefined, (updateTheme: string) => void]
+type ThemeHook = (themeName?: string) => [ThemeMap | undefined, (updateTheme: string) => void]
 
 const useTheme: ThemeHook = (themeName = 'dark') => {
-  const [theme, setTheme] = useState<ThemeType | undefined>(undefined)
+  const [theme, setTheme] = useState<ThemeMap | undefined>(undefined)
 
   useEffect(() => {
     const getThemeName = localStorage.getItem('theme')
@@ -12,9 +12,8 @@ const useTheme: ThemeHook = (themeName = 'dark') => {
     if (getThemeName) {
       const newTheme = THEMES.get(getThemeName)
       setTheme(newTheme)
-      localStorage.setItem('theme', getThemeName)
     } else {
-      updateTheme(getThemeName)
+      updateTheme(themeName)
     }
   }, [themeName])
 

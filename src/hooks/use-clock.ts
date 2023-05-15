@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 
-type ClockHook = () => [Date, boolean]
+type ClockHook = () => [any, boolean]
 
 const useClock: ClockHook = () => {
   const [currentTime, setCurrentTime] = useState(new Date())
+  const [timing, setTiming] = useState({ updateSeconds: {}, updateMinutes: {}, updateHours: {} })
   const [isDaytime, setIsDaytime] = useState(true)
 
   const updateTime = () => {
@@ -37,9 +38,17 @@ const useClock: ClockHook = () => {
     )
 
     setIsDaytime(hours >= sunriseTime.getHours() && hours < sunsetTime.getHours())
+
+    setTiming({
+      updateSeconds: { transform: `rotate(${currentTime.getSeconds() * 6}deg)` },
+      updateMinutes: { transform: `rotate(${currentTime.getMinutes() * 6}deg)` },
+      updateHours: {
+        transform: `rotate(${currentTime.getHours() * 30 + currentTime.getMinutes() / 2}deg)`,
+      },
+    })
   }, [currentTime])
 
-  return [currentTime, isDaytime]
+  return [timing, isDaytime]
 }
 
 export default useClock
