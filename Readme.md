@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Vite + React template, made for quick POC's 👋</h1>
+<h1 align="center">Hey folks 👋 - Welcome to Analog Clock </h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D16.0.0-blue.svg" />
